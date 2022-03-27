@@ -17,7 +17,7 @@
       'main__loading': $router.currentRoute.name === 'Loading'
     }">
       <div :class="$router.currentRoute.name !== 'Chat' ? 'brand' : 'brand brand__hidden'">
-        <img v-bind:src="require('./assets/logo.png')" />
+        <img v-bind:src="require('./assets/log.png')" />
       </div>
 
       <div
@@ -37,7 +37,7 @@
             <div class="circle">
               <img v-bind:src="require('./assets/main.png')" />
              </div>
-         </div> 
+         </div>
         <span class="chat-title">עמוד ראשי</span>
       </div>
        <div class="block">
@@ -47,7 +47,7 @@
     </div>
     </div>
     <div v-show="$router.currentRoute.name === 'Home' && $store.state.home.step === 0" class="app-counter">
-      <p class="app-counter-text">{{'סקיפי היא רשת חברתית ישראל חדשה '}}</p>
+      <p class="app-counter-text">{{'שם כתבות תוכן או טקסטים '}}</p>
       <!-- <p class="app-counter-content">{{online}}</p> -->
     </div>
 
@@ -64,6 +64,7 @@
         </div>
       </nav>
       <div class="footer-copyright">
+        <p>נבנה ע”י &copy; Grimix</p>
       </div>
     </div>
   </div>
@@ -187,7 +188,7 @@ body {
     align-items: center;
     justify-content: center;
   .buttom-nav{
-  width: 350px;
+  width: 400px;
   background: #9400D3;
   display: flex;
   flex-direction: row;
