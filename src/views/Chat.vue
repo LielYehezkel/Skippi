@@ -80,7 +80,7 @@
           </div>
           <div class="messenger-header-subject">
             <div class="messenger-header-subject-tool">
-               <img v-bind:src="require('../assets/77.png')" />
+               <img v-bind:src="require('../assets/77.png')" @click="handleLeave"/>
             </div>
           </div>
         </template>
