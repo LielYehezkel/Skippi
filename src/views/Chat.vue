@@ -11,7 +11,7 @@
       <a class="card-navigation-item card-navigation-item__center button_styled button_center_top" href="https://noar-il.co.il" target="_blank">חזרה לאתר</a>
       <a class="card-navigation-item card-navigation-item__right button_styled button_styled_left" href="#" @click="reportFake">דווח</a> -->
 
-      <!-- <template v-if="showModal">
+      <template v-if="showModal">
         <div class="modal-mask">
           <div class="modal-wrapper">
             <div class="modal-container">
@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-      </template> -->
+      </template>
     </div>
     <div class="messenger-header">
       <div class="messenger-header-container">
@@ -110,9 +110,8 @@
         <!-- Messenger Box -->
         <div class="messenger-content-input">
           <div class="switch-box">
-            <img v-bind:src="require('../assets/11.png')" />
+            <img v-bind:src="require('../assets/11.png')" @click="goToHome"/>
           </div>
-
           <form ref="chatForm" @submit="handleSubmit" class="form-box">
             <div class="form-group">
               <input
@@ -133,13 +132,12 @@
             >
               <img v-bind:src="require('../assets/66.png')" />
             </button>
-
             <button
               :class="$store.state.emoji.visible ? 'messenger-content-input-button__emoji messenger-content-input-button__emoji__active' : 'messenger-content-input-button__emoji'"
-              @click="openEmojiBox"
             >
-               <img v-bind:src="require('../assets/55.png')" />
+               <img v-bind:src="require('../assets/55.png')" @click="reportFake"/>
             </button>
+
             <!-- Emoji box -->
             <transition name="fade">
               <div v-show="$store.state.emoji.visible" class="messenger-content-emoji-box">
