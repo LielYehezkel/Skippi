@@ -1,5 +1,5 @@
 module.exports = {
   devServer: {
-    disableHostCheck: ture
+    disableHostCheck: true
   }
 }
